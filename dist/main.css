@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #f9f9f9;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #101114;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00ffc4;
+}
+
+.wrapper {
+  width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form {
+  position: relative;
+}
+
+#todo-input {
+  padding: 1rem 2rem;
+  width: 100%;
+  background: none;
+  border: 2px solid #4a4d57;
+  border-radius: 5rem;
+  font: inherit;
+  color: #f9f9f9;
+  caret-color: #00ffc4;
+}
+#todo-input:focus {
+  outline: none;
+}
+
+#add-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #00ffc4;
+  padding: 0 2rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  font-weight: 400;
+  color: #101114;
+  cursor: pointer;
+}
+
+.todo {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  background-color: #1c1d20;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.todo .todo-text {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.delete-btn {
+  padding: 0.3rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.delete-btn svg {
+  transition: 0.2s ease;
+}
+.delete-btn:hover {
+  fill: #ff0033;
+}
+
+.custom-checkbox {
+  border: 2px solid #00ffc4;
+  border-radius: 50%;
+  min-height: 1rem;
+  min-width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+input[type=checkbox]:checked ~ .custom-checkbox {
+  background-color: #00ffc4;
+}
+input[type=checkbox]:checked ~ .custom-checkbox svg {
+  fill: #1c1d20;
+}
+
+input[type=checkbox]:checked ~ .todo-text {
+  text-decoration: line-through;
+  color: #4a4d57;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  #add-btn {
+    position: unset;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    height: auto;
+  }
+  h1 {
+    margin-top: 3rem;
+    font-size: 15vw;
+  }
+}/*# sourceMappingURL=main.css.map */
